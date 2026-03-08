@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Книжный Дневник — Добавить книгу</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Книжный Дневник</h1>
+    <p>Книги, которые я ещё не прочитал — но уже люблю</p>
+  </header>
+
+  <main>
+    <h2>Добавить книгу</h2>
+    <form id="book-form" action="#" method="post">
+      <div class="form-group">
+        <label for="title">Название книги *</label>
+        <input type="text" id="title" name="title" required placeholder="Например: «Мастер и Маргарита»">
+      </div>
+
+      <div class="form-group">
+        <label for="author">Автор *</label>
+        <input type="text" id="author" name="author" required placeholder="Например: Михаил Булгаков">
+      </div>
+
+      <div class="form-group">
+        <label for="category">Категория *</label>
+        <select id="category" name="category" required>
+          <option value="">Выберите категорию</option>
+          <option value="classic">Классика</option>
+          <option value="modern">Современная проза</option>
+          <option value="sci-fi">Фантастика</option>
+          <option value="philosophy">Философия</option>
+          <option value="psychology">Психология</option>
+          <option value="history">История</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="description">Описание (опционально)</label>
+        <textarea id="description" name="description" rows="4" placeholder="Расскажите, почему вы хотите прочитать эту книгу..."></textarea>
+      </div>
+
+      <button type="submit">Добавить книгу</button>
+    </form>
+
+    <p><em>Поля, отмеченные *</em>, обязательны для заполнения.</p>
+  </main>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Главная</a></li>
+      <li><a href="books.html">Не прочитанные книги</a></li>
+      <li><a href="submit.html">Предложить книгу</a></li>
+      <li><a href="contacts.html">Контакты</a></li>
+      <li><a href="more.html">Дополнительно</a></li>
+    </ul>
+  </nav>
+
+  <footer>
+    <p>© 2025 Книжный дневник — хранитель непрочитанных мечтаний</p>
+  </footer>
+
+  <script>
+    // Простая обработка формы (в реальном проекте — отправка на сервер)
+    document.getElementById('book-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const title = document.getElementById('title').value;
+      const author = document.getElementById('author').value;
+      const category = document.getElementById('category').value;
+      const description = document.getElementById('description').value;
+
+      alert(`Книга "${title}" от ${author} (${category}) добавлена в список!`);
+      this.reset();
+    });
+  </script>
+</body>
+</html>

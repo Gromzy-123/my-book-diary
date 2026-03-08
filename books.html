@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Книжный Дневник — Не прочитанные книги</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Книжный Дневник</h1>
+    <p>Книги, которые я ещё не прочитал — но уже люблю</p>
+  </header>
+
+  <main>
+    <h2>Список книг для чтения</h2>
+
+    <!-- Фильтр по категориям -->
+    <div class="filter-controls">
+      <label for="category-filter">Фильтровать по категории:</label>
+      <select id="category-filter">
+        <option value="all">Все категории</option>
+        <option value="classic">Классика</option>
+        <option value="modern">Современная проза</option>
+        <option value="sci-fi">Фантастика</option>
+        <option value="philosophy">Философия</option>
+        <option value="psychology">Психология</option>
+        <option value="history">История</option>
+      </select>
+    </div>
+
+    <div class="books-grid">
+      <!-- Книги с атрибутом data-category и видимой категорией -->
+      <div class="book-card" data-category="classic">
+        <h3>«Мастер и Маргарита»</h3>
+        <p class="category">Категория: <strong>Классика</strong></p>
+        <p>Михаил Булгаков</p>
+        <p>Философская сатира, сочетающая реальность и миф, любовь и зло, божественное и человеческое — шедевр русской литературы XX века.</p>
+      </div>
+
+      <div class="book-card" data-category="sci-fi">
+        <h3>«1984»</h3>
+        <p class="category">Категория: <strong>Фантастика</strong></p>
+        <p>Джордж Оруэлл</p>
+        <p>Дистопия, в которой государство контролирует не только действия, но и мысли. Книга, которая заставляет задуматься о свободе, правде и власти.</p>
+      </div>
+
+      <div class="book-card" data-category="psychology">
+        <h3>«Преступление и наказание»</h3>
+        <p class="category">Категория: <strong>Психология</strong></p>
+        <p>Фёдор Достоевский</p>
+        <p>Психологический роман о моральном кризисе молодого студента, который решает «переступить через» этику ради высшей цели.</p>
+      </div>
+
+      <div class="book-card" data-category="modern">
+        <h3>«Убить пересмешника»</h3>
+        <p class="category">Категория: <strong>Современная проза</strong></p>
+        <p>Харпер Ли</p>
+        <p>История о расовой несправедливости в американском Юге через глаза ребёнка. Глубокая, трогательная и неизменно актуальная книга о совести.</p>
+      </div>
+
+      <div class="book-card" data-category="philosophy">
+        <h3>«Братья Карамазовы»</h3>
+        <p class="category">Категория: <strong>Философия</strong></p>
+        <p>Фёдор Достоевский</p>
+        <p>Философский роман о вере, сомнении, свободе воли и морали. Один из величайших текстов мировой литературы.</p>
+      </div>
+
+      <div class="book-card" data-category="history">
+        <h3>«Сто лет одиночества»</h3>
+        <p class="category">Категория: <strong>История</strong></p>
+        <p>Габриэль Гарсиа Маркес</p>
+        <p>Эпопея семьи Буэндия в вымышленном городе Марако. Магический реализм на высшем уровне — история о циклах, памяти и судьбе.</p>
+      </div>
+
+      <div class="book-card" data-category="psychology">
+        <h3>«Над пропастью во ржи»</h3>
+        <p class="category">Категория: <strong>Психология</strong></p>
+        <p>Дж. Д. Сэлинджер</p>
+        <p>Повесть о подростке, потерявшем веру в мир взрослых. Герой Холден Колфилд стал символом юношеской искренности и протеста.</p>
+      </div>
+
+      <div class="book-card" data-category="classic">
+        <h3>«Гордость и предубеждение»</h3>
+        <p class="category">Категория: <strong>Классика</strong></p>
+        <p>Джейн Остин</p>
+        <p>Классика английской литературы о любви, социальных нормах и личностном росте. Элегантный диалог между Элизабет Беннет и мистером Дарси.</p>
+      </div>
+
+      <div class="book-card" data-category="sci-fi">
+        <h3>«Три товарища»</h3>
+        <p class="category">Категория: <strong>Фантастика</strong></p>
+        <p>Эрих Мария Ремарк</p>
+        <p>Трогательная история дружбы трёх бывших солдат после Первой мировой войны — о любви, потере и поиске смысла в разрушенном мире.</p>
+      </div>
+
+      <div class="book-card" data-category="philosophy">
+        <h3>«Смерть Ивана Ильича»</h3>
+        <p class="category">Категория: <strong>Философия</strong></p>
+        <p>Лев Толстой</p>
+        <p>Медитация о смысле жизни, смерти и иллюзиях социального успеха. Кратко, но мощно — о том, как жить по-настоящему.</p>
+      </div>
+    </div>
+  </main>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Главная</a></li>
+      <li><a href="books.html">Не прочитанные книги</a></li>
+      <li><a href="submit.html">Предложить книгу</a></li>
+      <li><a href="contacts.html">Контакты</a></li>
+      <li><a href="more.html">Дополнительно</a></li>
+    </ul>
+  </nav>
+
+  <footer>
+    <p>© 2025 Книжный дневник — хранитель непрочитанных мечтаний</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
